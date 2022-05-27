@@ -33,13 +33,16 @@ Route::middleware('auth')
     ->namespace('Admin')
     ->prefix('admin')
     ->group( function() {
-        Route::get('/guest', 'HomeController@index')
+        /* 
+            This route shows yhe welcome page 
+         */
+        Route::get('home', 'HomeController@index')
         ->name('home'); 
         Route::resource('posts','PostController');
         Route::resource('categories','CategoryController');
     });
 
 
-    
+    /* This route shows yhe welcome page  */
     Route::get('/', 'Guest\HomeController@index'); 
     Route::get('posts','Guest\PostController@index')->name('guests.posts');   

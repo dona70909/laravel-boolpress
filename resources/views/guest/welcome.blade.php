@@ -30,10 +30,13 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             {{-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
                             <div class="buttons">
+                                {{--  //# CHECK LOGIN  --}}
                                 @if (Route::has('login'))
                                     @auth
-                                    {{-- change instead of route to the home --}}
+                                    {{-- //# change instead of route to the home  ONLY IF LOGIN --}}
                                     <a class="btn btn-primary" href="{{ route('posts.index') }}">Explore your Posts</a>
+
+                                    {{-- //# Logout event only if login  --}}
                                     <a  class="nav-link" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
@@ -44,7 +47,10 @@
                                     </form> 
     
                                 @else
+                                {{-- % ELSE YOU COULD LOGIN OR REGISTER --}}
                                     <a class="btn btn-primary"  class="nav-link" href="{{ route('login') }}">Login</a>
+
+                                    {{-- % IF I WOULD LIKE TO REGISTER I AM ROUTED TO THE REGISTER PAGE  --}}
                                     @if (Route::has('register'))
                                         <a class="btn btn-primary"  class="nav-link" href="{{ route('register') }}">Register</a>
                                     @endif
