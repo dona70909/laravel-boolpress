@@ -63,6 +63,7 @@
                     <div class="col-6">
                         <h2 class="text-uppercase">Welcome</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit tempore a sint saepe ipsa assumenda labore possimus, fugit, incidunt vero veniam minus aperiam commodi autem quis quibusdam maxime, iure culpa.</p>
+                        {{-- % guests and admins ARE ALLOWED TO "VIEW" THE POSTS --}}
                         <button class="btn btn-sm btn-primary">
                             <a href="{{route('guests.posts')}}">Show posts</a>
                         </button>

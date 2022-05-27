@@ -1,6 +1,7 @@
 <template>
     <div class="container-fluid">
         <Posts/>
+        <router-view></router-view>
     </div>
 </template>
 
