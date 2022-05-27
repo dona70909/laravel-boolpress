@@ -1,5 +1,6 @@
 <template>
     <div class="row">
+        <!-- //# Navigazione con le routes di vue all'interno della guest -->
         <router-link :to="{ name: 'about'}">
             <h1 class="fw-bolder fs-1">About us</h1>  
         </router-link>

@@ -1946,6 +1946,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* import Posts from '../components/Posts.vue';
 import Post from './Post.vue'; */
@@ -1965,6 +1966,7 @@ import Post from './Post.vue'; */
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -2016,6 +2018,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Post",
   mounted: function mounted() {
@@ -2036,6 +2039,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Post_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Post.vue */ "./resources/js/components/Post.vue");
+//
 //
 //
 //

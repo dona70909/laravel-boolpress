@@ -1,6 +1,7 @@
 <template>
     <section class="container-fluid">
         <div class="row p-3 justify-content-center">
+            <!-- //# example info inside guest page  -->
             <div class="card text-center col-6">
                 <div class="card-header">
                     About us 

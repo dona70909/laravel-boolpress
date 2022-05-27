@@ -1,5 +1,6 @@
 <template>
     <div class="col-3">
+        <!-- //# component single post -->
         <div class="card">
             <img class="card-img-top img-fluid py-2" :src="post.post_img" alt="This image should represent:post.post_title">
             <div class="card-body">
