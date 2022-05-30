@@ -13,6 +13,7 @@
                 <img class="card-img-top img-fluid py-2" src="{{$post->post_img}}" alt="This image should represent:  {{$post->post_title}}">
                 <div class="card-body">
                     <h5 class="card-title">{{$post->post_title}}</h5>
+                    <h6>{{$post->created_at->toFormattedDateString()}}</h6>
                     <h6>{{$post->category}}</h6>
                     
                     
