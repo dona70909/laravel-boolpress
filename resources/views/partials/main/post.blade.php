@@ -8,7 +8,11 @@
             @endif
         </div>
         <div class="col-8">
-            <img class="card-img-top img-fluid" src="{{$post->post_img}}" alt="Card image cap">
+                @if(str_starts_with($post->post_img, 'https://'))
+                    <img class="card-img-top img-fluid py-2" src="{{$post->post_img}}" alt="This image should represent:  {{$post->post_title}}">
+                @else
+                    <img class="card-img-top img-fluid py-2" src="{{asset('/storage' . '/' . $post->post_img )}}" alt="This image should represent:  {{$post->post_title}}">
+                @endif
             <div class="card-body">
                 <h5 class="card-title">{{$post->post_title}}</h5>
                 <h6>{{$post->created_at}}</h6>

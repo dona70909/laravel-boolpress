@@ -10,7 +10,12 @@
         </div>
         @foreach ($posts as $post)
             <div class="card col-3">
-                <img class="card-img-top img-fluid py-2" src="{{$post->post_img}}" alt="This image should represent:  {{$post->post_title}}">
+                @if(str_starts_with($post->post_img, 'http'))
+                    <img class="card-img-top img-fluid py-2" src="{{$post->post_img}}" alt="This image should represent:  {{$post->post_title}}">
+                @else
+                    <img class="card-img-top img-fluid py-2" src="{{asset('/storage' . '/'  . $post->post_img )}}" alt="This image should represent:  {{$post->post_title}}">
+                @endif
+        
                 <div class="card-body">
                     <h5 class="card-title">{{$post->post_title}}</h5>
                     <h6>{{$post->created_at->toFormattedDateString()}}</h6>

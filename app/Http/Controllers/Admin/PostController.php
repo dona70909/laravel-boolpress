@@ -6,9 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Post;
 use App\Model\Category;
-
-
-
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -50,6 +48,7 @@ class PostController extends Controller
         /* First i get the request */
         $data = $request->all();
         
+        
         /* check the request values from the input */
         $request->validate(
             [
@@ -67,7 +66,7 @@ class PostController extends Controller
         $post = new Post();
         $post->post_title = $data['post_title'];
         $post->post_text = $data['post_text'];
-        $post->post_img = $data['post_title'];
+        $post->post_img = Storage::put('uploads', $data['post_img']);
         
         $post->save();
 

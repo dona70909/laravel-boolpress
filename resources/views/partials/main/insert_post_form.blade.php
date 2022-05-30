@@ -1,9 +1,10 @@
 <section class="container-fluid">
     <div class="row justify-content-center p-5">
-       
+
         <div class="col-8">
-            <form action="{{route('posts.store')}}" method="post">
+            <form action="{{route('posts.store')}}" enctype="multipart/form-data" method="POST">
                 @csrf
+                @method('POST')
                 <div class="form-group">
                     <label for="post_title" >Title</label>
                     <input type="text" class="form-control @error('title') is-invalid @enderror" id="post_title" name="post_title" placeholder="Enter title">
@@ -21,7 +22,7 @@
 
                 <div class="form-group">
                     <label for="img"> Upload image </label>
-                    <input type="text" class="form-control" id="thumb" name="post_img" placeholder="img">
+                    <input type="file" class="form-control" id="thumb" name="post_img" placeholder="img">
                 </div>
 
 
