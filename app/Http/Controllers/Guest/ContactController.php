@@ -16,7 +16,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+      
     }
 
     /**
@@ -29,10 +29,7 @@ class ContactController extends Controller
         return view('guest.contact');
     }
 
-    public function thanks() 
-    {
-        return view('guest.thanks_message');
-    }
+  
 
     /**
      * Store a newly created resource in storage.
@@ -42,11 +39,16 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        
-
         dump($request);
-
+        Mail::to("maildiunadminbool@gmail.com")->send(new SendNewMail($request->authorEmail,$request->email_title, $request->email_content));
         
+        
+        
+    }
+
+    public function thanks() 
+    {
+        return view('guest.thanks_message');
     }
 
     /**

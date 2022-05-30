@@ -49,5 +49,5 @@ Route::middleware('auth')
     /* contact controller */
     
     Route::get('/contacts','Guest\ContactController@create')->name('guests.contact.us'); 
-    Route::post('/store','Guest\ContactController@store')->name('email.store');  
-    Route::get('/thanks','Guest\ContactController@thanks')->name('thanks');
+    Route::post('/contacts','Guest\ContactController@store')->name('email.store'); 
+    Route::get('/thanks','Guest\ContactController@thanks')->name('thanks.message');

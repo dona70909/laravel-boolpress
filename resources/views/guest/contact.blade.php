@@ -13,6 +13,12 @@
             <form action="{{route('email.store')}}" method="post">
                 @csrf
                 @method('post')
+
+                <div class="form-group">
+                    <label for="authorEmail" >Title</label>
+                    <input type="text" class="form-control" id="authorEmail" name="authorEmail" placeholder="Email author">
+                   
+                </div>
                 <div class="form-group">
                     <label for="email_title" >Title</label>
                     <input type="text" class="form-control @error('email-title') is-invalid @enderror" id="email_title" name="email_title" placeholder="Email title">
