@@ -45,4 +45,5 @@ Route::middleware('auth')
 
     /* This route shows yhe welcome page  */
     Route::get('/', 'Guest\HomeController@index'); 
-    Route::get('posts','Guest\PostController@index')->name('guests.posts');   
+    Route::get('posts','Guest\PostController@index')->name('guests.posts');  
+    Route::get('posts','Guest\ContactController@create')->name('guests.contact.us');  
