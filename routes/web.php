@@ -47,5 +47,7 @@ Route::middleware('auth')
     Route::get('/', 'Guest\HomeController@index'); 
     Route::get('posts','Guest\PostController@index')->name('guests.posts');  
     /* contact controller */
-    Route::get('contacts','Guest\ContactController@create')->name('guests.contact.us'); 
-    Route::post('contacts','Guest\ContactController@store')->name('thanks');  
+    
+    Route::get('/contacts','Guest\ContactController@create')->name('guests.contact.us'); 
+    Route::post('/store','Guest\ContactController@store')->name('email.store');  
+    Route::get('/thanks','Guest\ContactController@thanks')->name('thanks');

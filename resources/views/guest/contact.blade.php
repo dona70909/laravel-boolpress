@@ -9,14 +9,13 @@
 @section('content')
 <section class="container-fluid">
     <div class="row justify-content-center p-5">
-
         <div class="col-8">
-            <form action="{{route('posts.store')}}" enctype="multipart/form-data" method="POST">
+            <form action="{{route('email.store')}}" method="post">
                 @csrf
-                @method('POST')
+                @method('post')
                 <div class="form-group">
                     <label for="email_title" >Title</label>
-                    <input type="text" class="form-control @error('email-title') is-invalid @enderror" id="post_title" name="email_title" placeholder="Email title">
+                    <input type="text" class="form-control @error('email-title') is-invalid @enderror" id="email_title" name="email_title" placeholder="Email title">
                     @error('email_title')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
@@ -25,13 +24,9 @@
                     <label for="email_text">Email content</label>
                     <textarea rows="3" type="text" class="form-control" id="email_text" name="email_text" placeholder="text"></textarea>
                 </div>
-
-                
-
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-    
     </div>
 </section>
 @endsection

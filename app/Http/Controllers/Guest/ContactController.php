@@ -29,6 +29,11 @@ class ContactController extends Controller
         return view('guest.contact');
     }
 
+    public function thanks() 
+    {
+        return view('guest.thanks_message');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -37,11 +42,11 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $request->all();
+        
 
         dump($request);
 
-        return redirect()->route('thanks');
+        
     }
 
     /**
