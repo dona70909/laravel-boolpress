@@ -39,11 +39,10 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        dump($request);
         Mail::to("maildiunadminbool@gmail.com")->send(new SendNewMail($request->authorEmail,$request->email_title, $request->email_content));
         
         
-        
+        return redirect()->route('thanks.message');
     }
 
     public function thanks() 
