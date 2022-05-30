@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
+use App\Mail\SendNewMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -35,7 +37,11 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->all();
+
+        dump($request);
+
+        return redirect()->route('thanks');
     }
 
     /**
