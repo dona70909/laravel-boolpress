@@ -10,8 +10,10 @@
 <section class="container-fluid">
     <div class="row justify-content-center p-5">
 
+        {{-- message shown after sending the email --}}
         <div class="col-8">
-            Thank you!
+            Thank you for getting in touch!
+            Soon one of our admin will answer you!
         </div>
     
     </div>
