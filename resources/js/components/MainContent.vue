@@ -1,16 +1,12 @@
 <template>
     <div class="container-fluid">
+        <!-- display the routes pages -->
         <router-view></router-view>
     </div>
 </template>
 
 
 <script>
-
-//import Posts from '../components/Posts.vue';
-//import Post from './Post.vue';
-
-
 export default {
     name: "MainContent",
     components: {
